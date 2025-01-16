@@ -1,0 +1,30 @@
+.container {
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.item {
+    background: #456633;
+    padding: 20px;
+    flex-basis: 100px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+/* #item1 {
+    flex-grow: 1;
+}
+
+#item2 {
+    flex-grow: 2;
+} */
+
+#item3 {
+    flex-shrink: 2;
+}
