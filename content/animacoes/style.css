@@ -1,0 +1,164 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 50px 0;
+    position: relative;
+}
+
+.item {
+    width: 80px;
+    height: 80px;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+}
+
+.changeColorPurple {
+    background-color: purple;
+    transition: background-color 1s;
+}
+
+.changeColorPurple:hover {
+    background-color: black;
+}
+
+.changePositionBlue {
+    background-color: blue;
+    transition: transform 5s;
+    transform: translateX(0) scale(1)
+}
+
+.changePositionBlue:hover {
+    transform: translateX(100px) scale(1.5)
+}
+ 
+.changePositionOrange {
+    background-color: orange;
+    transition: transform 0.5s;
+}
+
+.changePositionOrange:hover {
+    background-color: red;
+    transform: rotateZ(360deg);
+}
+
+.changeSizeGreen {
+    background-color: green;
+    transition: width 2s, height 4s 2s, background-color 2s 2s; 
+}
+
+.changeSizeGreen:hover {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(15, 204, 15);
+}
+
+.inputRadio {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.5s;
+}
+
+.inputRadio:checked {
+    transform: scale(2);
+}
+
+@keyframes changeRed {
+    0%{
+        transform: scale(1);
+        left: 0px;
+        top: 0px;
+    }
+    25%{
+        transform: scale(1.5);
+        left: 200px;
+        top: 0px;
+    }
+    50%{
+        transform: scale(2.5);
+        left: 200px;
+        top: 200px;
+    }
+    
+    75%{
+        transform: scale(0.5);
+        left: 0px;
+        top: 200px;
+    }
+    100%{
+        transform: scale(1);
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.animationRed {
+    position: absolute;
+    /* animation-iteration-count: infinite; */
+    background-color: red;
+    animation-name: changeRed;
+    animation-duration: 2s;
+    animation-direction: alternate;
+}
+
+@keyframes fade {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+.divAnimationPink {
+    background-color: magenta;
+    animation: fade 1s infinite alternate;
+}
+
+.containerColum {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 50x 0;
+    position: relative;
+    flex-direction: column;
+}
+
+.itemRounded {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes movement {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(500px);
+    }
+}
+
+.animationLinear {
+    background-color: purple;
+    animation: movement 3s infinite;
+    animation-timing-function: linear;
+}
+
+.animationEase {
+    background-color: blue  ;
+    animation: movement 3s ease infinite;
+}
+
+.animationEaseOut{
+    background-color: orange;
+    animation: movement 3s ease-out infinite;
+} 
+
+.animationEaseIn {
+    background-color: green;
+    animation: movement 3s ease-in;
+}
