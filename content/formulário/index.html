@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Título da Página</title>
+    </head>
+    <body>
+        <h1>Formulário</h1>
+        <form action="#">
+            <div>
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div>
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" required>
+            </div>
+
+            <div>
+                <label for="idade">Idade</label>
+                <input type="number" name="Idade" id="Idade" required min="10" max="15">
+            </div>
+
+            <div>
+                <label for="genero">Gênero</label>
+                <select name="genero" id="genero">
+                    <option value="feminino">Feminino</option>
+                    <option value="masculino">Masculino</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="termos">Aceitar Termos</label>
+                <input type="checkbox" name="termos" id="termos" checked>
+            </div>
+
+            <div>
+                <label for="cor">Cor Preferida</label>
+                <input type="color" name="cor" id="cor">
+            </div>
+
+            <div>
+                <label for="anexo">Anexo</label>
+                <input type="file" name="anexo" id="anexo">
+            </div>
+
+            <div>
+                <label for="comentario">Comentário</label>
+                <textarea 
+                name="comentario" 
+                id="comentario"
+                rows="10"
+                cols="50"
+                ></textarea>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </body>
+</html>

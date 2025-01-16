@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="#">
+            <fieldset>
+                <legend>Formulário de Usuário</legend>
+                
+                <div class="inputContainer">
+                    <input type="text" id="nome" name="nome" class="input" required>
+                    <label for="nome" class="labelAnimation">Nome</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="text" id="email" name="email" class="input" required>
+                    <label for="email" class="labelAnimation">Email</label>
+                </div>
+                <div class="inputContainer">
+                    <input type="tel" id="telefone" name="telefone" maxlength="11" class="input" required>
+                    <label for="telefone" class="labelAnimation">Telefone</label>
+                </div>
+
+                <label for="nascimento" class="label">Data de Nascimento</label>
+                <input type="date" id="nascimento" name="nascimento">
+
+                <div class="inputContainer">
+                    <p>Área de Desenvolvimento de Aplicações</p>
+                    <input type="radio" name="area" id="frontend">
+                    <label for="frontend" class="label">Frontend</label>
+
+                    <input type="radio" name="area" id="backend">
+                    <label for="backend" class="label">Backend</label>
+                    
+                    <input type="radio" name="area" id="fullstack">
+                    <label for="fullstack" class="label">Fullstack</label>
+                </div>
+                
+                <input type="submit" name="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
