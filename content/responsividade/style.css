@@ -20,7 +20,12 @@
 body {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-height: 100vh;
+    height: 100vh;
+}
+
+button {
+    background-color: none;
+    cursor: pointer;
 }
 
 #gradient {
@@ -28,11 +33,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 100vh;
 }
-
-#gradient img {
-    height: 100vh;
-} 
 
 #login {
     background: var(--light-gray);
@@ -73,8 +75,14 @@ form {
     gap: 1rem;
 }
 
+#login-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 #login-controls a {
-    text-decoration: inline;
+    text-decoration: underline;
 }
 
 #login-controls label {
@@ -97,8 +105,7 @@ label {
     gap: 1rem;
 }
 
-button {
-    background: none;
+#buttons-container button {
     border: 1px solid var(--body);
     padding: 1.2rem;
     border-radius: 10px;
@@ -108,7 +115,37 @@ button {
 }
 
 .login-button {
-    border: none;
+    border: none !important; 
     background: linear-gradient(to right, var(--pink), var(--purple));
     color: var(--light-gray);
+}
+
+#social-media-containers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#social-media-containers div {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+#social-media-containers div button {
+    border: 1px solid var(--light-gray);
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        grid-template-columns: 1fr;    
+    }
+    #gradient {
+        display: none;
+    }
 }
