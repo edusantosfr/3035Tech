@@ -1,0 +1,29 @@
+const listaTemperaturas = [23, 23, 30, 29, 32, 34, 35]
+
+let menorTemp = 0, maiorTemp = 0, mediaTemp = 0, menorMediaAnual = 0
+
+function calcularTemp(lista) {
+    for(let i = 0; i < lista.length; i++) {
+        if (maiorTemp < lista[i]) {
+            maiorTemp = lista[i]
+        }
+        mediaTemp += lista[i]
+    }
+    mediaTemp /= 7
+    menorTemp = maiorTemp
+    let listaMenorAnual = []
+    for(let i = 0; i < lista.length; i++) {
+        if (menorTemp > lista[i]) {
+            menorTemp = lista[i]
+        }
+        if (lista[i] < mediaTemp) {
+            listaMenorAnual.push(lista[i])
+        }
+    }
+    console.log(`a) A maior temperatura foi de ${maiorTemp.toFixed(2)}C`)
+    console.log(`b) A menor temperatura foi de ${menorTemp.toFixed(2)}C`)
+    console.log(`c) A media anual de temperatura foi de ${mediaTemp.toFixed(2)}C`)
+    console.log('d) As temperaturas que ficaram abaixo da média anual foram '+listaMenorAnual)
+}
+
+calcularTemp(listaTemperaturas)
