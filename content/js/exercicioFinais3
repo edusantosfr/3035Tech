@@ -1,0 +1,48 @@
+let listaDeLivros = [
+    {
+        titulo: 'Dom Quixote',
+        autor: 'Miguel de Cervantes',
+        anoPublicacao: 1605
+    },
+    {
+        titulo: 'Cem anos de solidão',
+        autor: 'Gabriel Garcia Marquez',
+        anoPublicacao: 1967
+    },
+    {
+        titulo: 'A revolução dos Bichos',
+        autor: 'George Orwell',
+        anoPublicacao: 1945
+    }
+]
+// adicionar livros 
+function adicionarLivros (titulo, autor, anoPublicacao) {
+    listaDeLivros.push({titulo, autor, anoPublicacao})
+    console.log(listaDeLivros)
+}
+
+// adicionarLivros('bla', 'bla', 'bla')
+
+// buscar por autor
+function buscarPorAutor (autor) {
+    listaDeLivros.forEach(element => {
+        if (autor == element.autor) {
+            console.log(element)
+        }
+    });
+}
+
+// buscarPorAutor('Gabriel Garcia Marquez')
+
+// atualizar ano de publicacao
+function atualizarAno (titulo, ano) {
+    listaDeLivros.forEach(element => {
+        if (titulo == element.titulo) {
+            element.anoPublicacao = ano
+            console.log(element)
+        }
+    });
+}
+
+atualizarAno('A revolução dos Bichos', 2025)
+
