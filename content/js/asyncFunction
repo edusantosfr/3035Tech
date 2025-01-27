@@ -1,0 +1,26 @@
+// ASYNC/AWAIT
+
+async function carregarRecurso() {
+    try {
+        await new Promise(resolver => setTimeout(resolver, 2000))
+
+        const resposta = 'Conteúdo externo'
+
+        return resposta
+    } catch (error){
+        throw new Error('Erro ao carregar o recurso')
+    }
+} 
+
+// função que consome a função assíncrona
+
+async function usarRecurso() {
+    try {
+        const resultado = await carregarRecurso()
+        console.log('Recurso carregado com sucesso:', resultado)
+    } catch (error) {
+        console.error('Error ao usar o recurso:', error)
+    }
+}
+
+usarRecurso()
